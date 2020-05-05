@@ -15,7 +15,7 @@ minetest.override_item("xp_redo:protector", {
     old_after_place_node(pos, placer)
   end,
 
-  after_destruct = function(pos, oldnode)
+  after_destruct = function(pos)
     -- removed protector
     protection_memoize.invalidate(pos, 32)
   end,

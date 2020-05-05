@@ -8,14 +8,14 @@ assert(not node_def.after_destruct)
 local old_on_receive_fields = node_def.on_receive_fields
 assert(old_on_receive_fields)
 
-minetest.override_item("priv_protector:protect", {
+minetest.override_item("priv_protector:protector", {
   after_place_node = function(pos, placer)
     -- newly placed protector
     protection_memoize.invalidate(pos, 32)
     old_after_place_node(pos, placer)
   end,
 
-  after_destruct = function(pos, oldnode)
+  after_destruct = function(pos)
     -- removed protector
     protection_memoize.invalidate(pos, 32)
   end,
