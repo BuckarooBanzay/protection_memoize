@@ -16,5 +16,6 @@ read_globals = {
 
 	-- deps
 	"protector",
-	"areas"
+	"areas",
+	"monitoring"
 }
