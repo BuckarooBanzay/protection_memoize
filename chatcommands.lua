@@ -5,6 +5,7 @@ minetest.register_chatcommand("protection_memoize_clear", {
   privs = { server = true },
   func = function()
     protection_memoize.invalidate_all()
+    return true, "Invalidated protection cache"
   end
 })
 
@@ -13,6 +14,7 @@ minetest.register_chatcommand("protection_memoize_enable", {
   privs = { server = true },
   func = function()
     protection_memoize.enabled = true
+    return true, "protection memoization enabled"
   end
 })
 
@@ -21,5 +23,6 @@ minetest.register_chatcommand("protection_memoize_disable", {
   privs = { server = true },
   func = function()
     protection_memoize.enabled = false
+    return true, "protection memoization disabled"
   end
 })
