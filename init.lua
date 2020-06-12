@@ -9,7 +9,6 @@ protection_memoize = {
 local MP = minetest.get_modpath("protection_memoize")
 
 dofile(MP.."/memoize.lua")
-dofile(MP.."/privs.lua")
 dofile(MP.."/chatcommands.lua")
 dofile(MP.."/is_protected.lua")
 dofile(MP.."/periodic_flush.lua")
