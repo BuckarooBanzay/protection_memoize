@@ -2,7 +2,8 @@
 protection_memoize = {
   -- opt-in
   -- TODO: set to true after testing
-  enabled = false
+  enabled = false,
+  periodic_flush = 2
 }
 
 local MP = minetest.get_modpath("protection_memoize")
@@ -11,6 +12,7 @@ dofile(MP.."/memoize.lua")
 dofile(MP.."/privs.lua")
 dofile(MP.."/chatcommands.lua")
 dofile(MP.."/is_protected.lua")
+dofile(MP.."/periodic_flush.lua")
 
 if minetest.get_modpath("protector") then
   dofile(MP.."/compat/protector.lua")
