@@ -36,7 +36,9 @@ function protection_memoize.invalidate(pos, radius)
       cache_size = cache_size - cache[mapblock_x].count
       cache_size_metric.set(cache_size)
     end
-    cache[mapblock_x] = {}
+    cache[mapblock_x] = {
+      count = 0
+    }
   end
 end
 
