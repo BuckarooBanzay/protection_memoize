@@ -2,6 +2,8 @@ Minetest protection memoizer
 
 # Overview
 
+Caches calls to `minetest.is_protected()`
+
 State: **WIP**
 
 # Compatible mods
